@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Flipyy Shopping App</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script type="text/babel" src="app.js"></script>
+
+    <div class="login-form">
+        <h2>Login</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button class="button" type="submit">Login</button>
+        </form>
+    </div>
+
+    <button class="button">Customer Support</button>
+    <button class="button" id="darkModeBtn">Dark Mode</button>
+    <button class="button" id="lightModeBtn">Light Mode</button>
+
+    <script>
+        // Sample React component for the login page
+const LoginPage = () => {
+    return (
+        <div className="login-form">
+            <h2>Welcome to Flipyy Shopping App</h2>
+            <form>
+                <label htmlFor="username">Username:</label>
+                <input type="text" id="username" name="username" required />
+
+                <label htmlFor="password">Password:</label>
+                <input type="password" id="password" name="password" required />
+
+                <button className="button" type="submit">Login</button>
+            </form>
+        </div>
+    );
+};
+
+ReactDOM.render(<LoginPage />, document.getElementById('root'));
+
+// JavaScript for dark mode and light mode buttons
+const darkModeBtn = document.getElementById('darkModeBtn');
+const lightModeBtn = document.getElementById('lightModeBtn');
+const body = document.body;
+
+darkModeBtn.addEventListener('click', () => {
+    body.classList.add('dark-mode');
+});
+
+lightModeBtn.addEventListener('click', () => {
+    body.classList.remove('dark-mode');
+});
+
+        // Add your JavaScript for handling dark mode and light mode buttons here
+    </script>
+</body>
+</html>
